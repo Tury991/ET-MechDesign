@@ -1,4 +1,4 @@
-window.I18N = {
+
   en: {
     "tagline": "Precision CAD Modeling & 3D Mechanical Design",
     "heroText": "Mechanical design, 3D rendering, FEM checks and prototyping \u2014 for makers, engineers and small businesses.",
@@ -26,5 +26,4 @@ window.I18N = {
     "pkgdesc": "Modellazione CAD personalizzata, file pronti per la produzione e controlli FEM di base su richiesta.",
     "contactBlurb": "Hai un progetto? Invia un breve brief e risponderò con un preventivo.",
     "aboutBlurb": "ET MechDesign offre modelli CAD precisi, disegni tecnici e rendering fotorealistici con SolidWorks, Fusion 360 e FreeCAD. Mi focalizzo su preparazione alla produzione e comunicazione chiara. Disponibile per progetti freelance e piccole serie."
-  }
-};
+  };
