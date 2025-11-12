@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ET MechDesign – CAD & 3D Modeling Services</title>
+<meta name="description" content="ET MechDesign – Precision CAD design, 3D modeling, rendering, and prototyping for makers and engineers.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" role="navigation" aria-label="Main">
+      <div class="brand">ET MechDesign</div>
+      <div class="controls">
+        <button id="toggleLang" class="icon-btn" aria-label="Toggle language">IT</button>
+        <button id="toggleDark" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+
+    <header class="header">
+      <h1 class="hero-title" data-i18n="tagline">Precision CAD Modeling & 3D Mechanical Design</h1>
+      <p class="hero-sub" data-i18n="heroText">Mechanical design, 3D rendering, FEM checks and prototyping — for makers, engineers and small businesses.</p>
+      <a href="#contact" class="btn" data-i18n="contact">Get in touch</a>
+    </header>
+
+    <main>
+      <section class="grid grid-3" aria-label="Services">
+        <div class="card">
+          <h3 data-i18n="pkg1">Start CAD</h3>
+          <p class="muted" data-i18n="pkgdesc">Custom CAD modeling, manufacturing-ready files and basic FEM checks included on request.</p>
+          <p style="margin-top:12px"><strong>€60</strong> — 2-3 days</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="pkg2">Pro Design</h3>
+          <p class="muted" data-i18n="pkgdesc">Custom CAD modeling, manufacturing-ready files and basic FEM checks included on request.</p>
+          <p style="margin-top:12px"><strong>€120</strong> — 3-5 days</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="pkg3">Render & Present</h3>
+          <p class="muted" data-i18n="pkgdesc">Custom CAD modeling, manufacturing-ready files and basic FEM checks included on request.</p>
+          <p style="margin-top:12px"><strong>€90</strong> — 3-4 days</p>
+        </div>
+      </section>
+
+      <section style="margin-top:28px">
+        <h2 data-i18n="services" style="margin-bottom:8px">Services</h2>
+        <p style="color:var(--muted)" data-i18n="contactBlurb">Have a project? Send a short brief and I will reply with a quote.</p>
+      </section>
+
+      <section style="margin-top:22px">
+        <h2 data-i18n="gallery">Gallery</h2>
+        <div class="gallery" aria-label="Gallery">
+          <img src="assets/gallery/file1.png" alt="Render 1">
+          <img src="assets/gallery/file2.png" alt="Render 2">
+          <img src="assets/gallery/file3.png" alt="Render 3">
+        <!--  <img src="https://media.istockphoto.com/id/1440908297/it/foto/componenti-metallici-torniti-di-precisione-realizzati-su-macchine-cnc-per-applicazioni.jpg?s=1024x1024&w=is&k=20&c=7hcGPQUiEnc0C-qJ-QRqjYZ1nZvF83E-3TBdqd0lzm8=" alt="Render 1">
+          <img src="https://media.istockphoto.com/id/640286660/it/foto/kit-ragno.jpg?s=1024x1024&w=is&k=20&c=fF8LbZkPyPMLZOtGb08yA6w09m5yjvgaRikhQmIY_PM=" alt="Render 2">
+          <img src="https://media.istockphoto.com/id/1364095617/it/foto/dettagli-per-lassemblaggio-di-un-chiaro-di-luna-ancora-su-uno-sfondo-bianco.jpg?s=1024x1024&w=is&k=20&c=MOw9qoHNJ2la_Hj7UZuCTV0z1QQGgzI9m_ydpEDAzFA=" alt="Render 3"> -->
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <div class="contact" role="form">
+          <h2 data-i18n="contact">Get in touch</h2>
+          <p style="color:var(--muted)" data-i18n="contactBlurb">Have a project? Send a short brief and I will reply with a quote.</p>
+          <form id="contactForm">
+            <input name="name" class="input" placeholder="Your name" required style="margin-bottom:8px"/>
+            <input name="email" type="email" class="input" placeholder="Email" required style="margin-bottom:8px"/>
+            <textarea name="message" class="input" placeholder="Short message / brief" rows="5" required style="margin-bottom:8px"></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit" class="btn">Send message</button>
+              <a href="mailto:info@etmechdesign.com" style="color:var(--accent);text-decoration:underline">Or email me</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section style="margin-top:32px">
+        <h2 data-i18n="about">About</h2>
+        <p style="color:var(--muted);max-width:800px" data-i18n="aboutBlurb">ET MechDesign delivers precise CAD models, technical drawings and photorealistic renderings using SolidWorks, Fusion 360 and FreeCAD. I focus on production readyness and clear communication. Available for freelance and small-batch projects.</p>
+      </section>
+    </main>
+
+    <footer class="footer" style="margin-top:28px">
+      <div>© 2025 ET MechDesign — CAD & 3D Modeling Services</div>
+    </footer>
+  </div>
+  <script>window.I18N = {en: {"tagline": "Precision CAD Modeling & 3D Mechanical Design", "heroText": "Mechanical design, 3D rendering, FEM checks and prototyping \u2014 for makers, engineers and small businesses.", "services": "Services", "gallery": "Gallery", "contact": "Get in touch", "about": "About", "pkg1": "Start CAD", "pkg2": "Pro Design", "pkg3": "Render & Present", "pkgdesc": "Custom CAD modeling, manufacturing-ready files and basic FEM checks included on request.", "contactBlurb": "Have a project? Send a short brief and I will reply with a quote."}, it: {"tagline": "Progettazione Meccanica e Modellazione 3D di Precisione", "heroText": "Progettazione meccanica, rendering 3D, controlli FEM e prototipazione \u2014 per maker, ingegneri e piccole aziende.", "services": "Servizi", "gallery": "Galleria", "contact": "Contatti", "about": "Chi sono", "pkg1": "Start CAD", "pkg2": "Pro Design", "pkg3": "Render & Presenta", "pkgdesc": "Modellazione CAD personalizzata, file pronti per la produzione e controlli FEM di base su richiesta.", "contactBlurb": "Hai un progetto? Invia un breve brief e risponder\\u00f2 con un preventivo."}};</script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
