@@ -1,0 +1,22 @@
+{
+  "name": "ET MechDesign",
+  "short_name": "ET MechDesign",
+  "description": "Precision CAD & 3D mechanical design services for makers, engineers and small businesses.",
+  "start_url": "/et-mechdesign/",
+  "scope": "/et-mechdesign/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f1f1f",
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
