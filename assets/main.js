@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // language toggle
   let lang = localStorage.getItem('etmd-lang') || 'en';
-
+/*
+  
   // function to set language texts
   function setLang(l){
   if (!window.I18N || !window.I18N[l]) {
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   if (toggleLang) toggleLang.innerText = l === 'en' ? 'IT' : 'EN';
 }
-
+*/
 
   // init language
   setLang(lang);
