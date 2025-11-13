@@ -20,4 +20,12 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui, -apple-system, 'Sego
 .contact{max-width:720px;margin:18px auto;padding:18px;background:var(--card);border-radius:12px}
 .input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e5e7eb;background:transparent;color:var(--text)}
 .footer{padding:20px 0;text-align:center;color:var(--muted);font-size:14px}
+
+#toggleLang {color: var(--text);font-weight: 600; background: transparent; border: none;cursor: pointer;}
+.dark #toggleLang {color: #f8fafc;}
+
+#theme-toggle {position: relative; width: 36px; height: 36px; border: none; background: transparent; cursor: pointer; font-size: 20px; color: var(--text); display: flex; align-items: center; justify-content: center; transition: color 0.3s ease;}
+#theme-toggle::before {content: "☀️";}
+.dark #theme-toggle::before {content: "🌙";}
+
 @media(max-width:600px){ .hero-title{font-size:22px} .nav{padding:10px 0} }
