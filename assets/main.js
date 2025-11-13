@@ -34,12 +34,28 @@
 
   // function to set language texts
   function setLang(l){
-    document.querySelectorAll('[data-i18n]').forEach(el=>{
-      const key = el.getAttribute('data-i18n');
-      if (window.I18N && window.I18N[l] && window.I18N[l][key]) el.innerHTML = window.I18N[l][key];
-    });
-    if (toggleLang) toggleLang.innerText = l === 'en' ? 'IT' : 'EN';
+  if (!window.I18N || !window.I18N[l]) {
+    console.warn('I18N missing for', l);
+    return;
   }
+  const map = window.I18N[l];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    // allow nested keys or accidental spaces
+    const cleanKey = key && key.trim();
+    if (!cleanKey) return;
+    const val = map[cleanKey];
+    if (typeof val !== 'undefined') {
+      // Use innerHTML so you can include simple markup in translations if desired
+      el.innerHTML = val;
+    } else {
+      // fallback: keep current content, but warn in console
+      console.warn(`Missing translation for key "${cleanKey}" in language "${l}"`);
+    }
+  });
+  if (toggleLang) toggleLang.innerText = l === 'en' ? 'IT' : 'EN';
+}
+
 
   // init language
   setLang(lang);
