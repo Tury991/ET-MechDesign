@@ -1,47 +1,41 @@
 let I18N = {};
 let currentLang = 'en';
+let translationsLoaded = false;
 
 async function loadI18N() {
   try {
     const response = await fetch('i18n.json');
     I18N = await response.json();
+    translationsLoaded = true;
   } catch (err) {
-    console.error('Error loading translations:', err);
+    console.error('❌ Error loading translations:', err);
   }
 }
 
-function t(key) {
-  if (!I18N[currentLang] || !I18N[currentLang][key]) {
-    console.warn(`Missing translation for key "${key}" in language "${currentLang}"`);
-    return key;
+function setLang(lang) {
+  if (!translationsLoaded || !I18N[lang]) {
+    console.warn(`⚠️ I18N missing for ${lang}`);
+    return;
   }
-  return I18N[currentLang][key];
-}
-
-async function initTranslations() {
-  await loadI18N();
-  applyTranslations();
-}
-
-function applyTranslations() {
+  currentLang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    el.textContent = t(key);
+    if (I18N[lang][key]) el.textContent = I18N[lang][key];
   });
 }
 
-// ✅ Event listener al caricamento pagina
 document.addEventListener('DOMContentLoaded', async () => {
-  await initTranslations();
+  await loadI18N();
+  setLang(currentLang);
 
-  // Gestione cambio lingua
   const toggleLang = document.getElementById('toggleLang');
   toggleLang.addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'it' : 'en';
-    toggleLang.textContent = currentLang.toUpperCase() === 'EN' ? 'IT' : 'EN';
-    applyTranslations();
+    toggleLang.textContent = currentLang === 'en' ? 'IT' : 'EN';
+    setLang(currentLang);
   });
 });
+
 
 
 // assets/main.js
